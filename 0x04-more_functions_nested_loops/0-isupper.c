@@ -15,5 +15,5 @@ int _isupper(int c)
 int main(void)
 {
 	_isupper();
-	return 0;
+	return (0);
 }
