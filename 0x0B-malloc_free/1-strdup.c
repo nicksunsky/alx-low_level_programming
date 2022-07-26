@@ -4,22 +4,26 @@
 
 char *_strdup(char *str)
 {
-  int i = 0, j, k = 0;
-  char *newStr = NULL;
+	char *my_array;
+	int i, len;
 
-  while (str[k] != '\0')
-    {
-      i++;
-      k++;
-    }
+	my_array = malloc(sizeof(str));
 
-  newStr = malloc(sizeof(char) * (i + 1));
+	i = len = 0;
+	while (str[i] != '\0')
+	{
+		len++;
+		i++;
+	}
 
-  if (str == NULL)
-    return (NULL);
+	if (my_array == NULL)
+		return (NULL);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		my_array[i] = str[i];
+		i++;
+	}
 
-  for (j = 0; j <= i; j++)
-    newStr[j] = str[j];
-
-  return (newStr);
+	return (my_array);
 }
