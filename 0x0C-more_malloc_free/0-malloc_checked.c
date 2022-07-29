@@ -1,20 +1,18 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * malloc_checked - Creates an array based on passed in value
- * @b: Value passed in for array creation
- * Return: nothing
+ * malloc_checked - malloc memory and exit 98 on failure
+ *
+ * @b: size to allocate
+ *
+ * Return: pointer to allocated data
  */
 void *malloc_checked(unsigned int b)
 {
-	void *ptr = NULL;
+	void *a;
 
-	ptr = malloc(b);
-
-	if (ptr == NULL)
+	a = malloc(b);
+	if (!a)
 		exit(98);
-
-	return (ptr);
+	return (a);
 }
