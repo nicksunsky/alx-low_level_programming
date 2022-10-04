@@ -1,4 +1,4 @@
-*/
+/**
  *
  * _strstr - searches a string for a substring
  *
